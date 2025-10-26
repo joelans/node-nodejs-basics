@@ -1,5 +1,6 @@
 import { createReadStream } from 'node:fs';
 import { join } from 'node:path';
+import { EOL } from 'node:os';
 
 const read = async () => {
   // Write your code here
@@ -8,7 +9,7 @@ const read = async () => {
 
   readStream.on('data', (chunk) => {
     process.stdout.write(chunk);
-    process.stdout.write('\n');
+    process.stdout.write(EOL);
   });
 
 };
